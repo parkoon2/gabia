@@ -22,8 +22,9 @@
     background-position: center bottom;
 }
 #sbanner{
-    height: 228px;
-    background-color: #ffcdd2
+    border-top: 1px solid #efefef;
+    /* height: 228px;
+    background-color: #ffcdd2 */
 
 }
 #select{
@@ -138,14 +139,58 @@
 .banner p {
     font-size: 18px;
     padding: 20px 0;
+    color: #666666;
+    font-weight: 300;
 }
 
 .banner em {
     font-size: 18px;
-    color: #f66b05
+    color: #f66b05;
+    display: block;
 }
 
 .banner .view {
     font-size: 16px;
+    display: inline-block;
+    margin-top: 50px;
+    border: 1px solid #333333;
+    background-color: #ffffff;
+    padding: 12px 42px;
+    /* 
+        hover 와 같은 효과와 같이 사용한다
+        all 해도 되고.... 특정 값을 넣어줘도 된다.
+    */
+    transition: all 0.3s ease;
+}
 
+.banner .view:hover {
+    background-color: #333333;
+    color: #ffffff
+}
+
+/* sbanner */
+.sbanner { 
+    overflow: hidden;
+    padding: 70px 0px;
+}
+.sbanner > div {
+    /* float left 를 주면 구조가 깨지니까 상위에 무조건 overflow hidden을 준다! */
+    float: left;
+    width: 25%;
+}
+.sbanner > div h4 {
+    font-size: 24px;
+    /* margin-bottom: 4px; */
+    padding-bottom: 4px;
+}
+
+.sbanner > div h4:hover {
+    text-decoration: underline;
+    /* border-bottom: 1px solid #000000; */
+}
+
+.sbanner > div p {
+    font-size: 20px;
+    color: #676767;
+    padding-right: 80px;
 }
